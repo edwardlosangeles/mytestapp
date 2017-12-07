@@ -53,8 +53,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :production do
-  
-  # https://rocky-mesa-41271.herokuapp.com/ | https://git.heroku.com/rocky-mesa-41271.git
+ 
   gem 'pg'
 
 end

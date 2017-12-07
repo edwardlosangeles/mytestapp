@@ -7,7 +7,7 @@ class StaticPagesController < ApplicationController
   end
 
   def landing_page
-  	#@featured_product = Product.first
+  	@featured_product = Product.first
   	# debug .erb
 		p "*=*=*=*=DEBUG: " + File.expand_path(__FILE__) + ": landing page*=*=*=*="
   end

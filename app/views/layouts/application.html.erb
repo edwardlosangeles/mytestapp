@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mytestapp</title>
+    <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+
+    <% if user_signed_in? %>
+      <%= link_to('Logout', destroy_user_session_path, method: :delete) %> |
+    <% else %>
+      <%= link_to('Login', new_user_session_path) %> |
+    <% end %>
+
+    <%= link_to "INDEX", static_pages_index_path %> | 
+    <%= link_to "CONTACT", static_pages_contact_path %> |
+    <%= link_to "ABOUT", static_pages_about_path %> |
+    <%= link_to "PRODUCTS", products_path %> |
+    <%= link_to "ORDERS", orders_path %> <br>
+    
+    <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+      <%= form.label :q, 'Search for:' %>
+      <%= form.text_field :q, id: 'whatever', value: params[:whatever] %>
+      <%= form.submit 'Search' %>
+    <% end %>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+
+
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+<h1>New Product</h1>
+
+<!-- debug .erb-->
+<%p "*=*=*=*=DEBUG: " + File.expand_path(__FILE__) + ": new view*=*=*=*=" %>
+
+<%= render 'form', product: @roduct %>
+
+<%= link_to 'Back', products_path %>
+
+

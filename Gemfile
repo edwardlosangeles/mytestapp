@@ -37,7 +37,7 @@ group :development, :test do
 
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-  
+
 end
 
 group :development do
@@ -53,7 +53,10 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :production do
+  
+  # https://rocky-mesa-41271.herokuapp.com/ | https://git.heroku.com/rocky-mesa-41271.git
   gem 'pg'
+
 end
 
 gem 'jquery-rails'

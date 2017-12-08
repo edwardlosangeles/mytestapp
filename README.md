@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+github repository:
+https://github.com/edwardlosangeles/mytestapp
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+heroku
+app name: epictestapp
+original app name: peaceful-falls-33952
+https://dashboard.heroku.com/apps/epictestapp
+https://epictestapp.herokuapp.com/

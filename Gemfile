@@ -54,6 +54,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :production do
  
+  #heroku app name: epictestapp
+  #original app name: peaceful-falls-33952
+  #https://epictestapp.herokuapp.com/
   gem 'pg'
 
 end

@@ -13,12 +13,12 @@
   <body>
 
     <% if user_signed_in? %>
-      <%= link_to('Logout', destroy_user_session_path, method: :delete) %> |
+      <%= link_to('LOGOUT', destroy_user_session_path, method: :delete) %>
     <% else %>
-      <%= link_to('Login', new_user_session_path) %> |
-    <% end %>
+      <%= link_to('LOGIN', new_user_session_path) %>
+    <% end %> |
 
-    <%= link_to "INDEX", static_pages_index_path %> | 
+    <%= link_to "INDEX", static_pages_index_path %> |
     <%= link_to "CONTACT", static_pages_contact_path %> |
     <%= link_to "ABOUT", static_pages_about_path %> |
     <%= link_to "PRODUCTS", products_path %> |
@@ -30,10 +30,15 @@
       <%= form.submit 'Search' %>
     <% end %>
 
+    <br>
+    override default layout: app/views/layouts/application.html.erb <br>
+    with this layout: app/views/layouts/product.html.erb <br>
+    ProductsController#index: render layout: "product" <br>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-
+   
 
     <%= yield %>
   </body>

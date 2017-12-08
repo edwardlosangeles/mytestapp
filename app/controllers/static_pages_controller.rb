@@ -13,4 +13,23 @@ class StaticPagesController < ApplicationController
   end
 
 
+  def thank_you
+
+    @name = params[:name]
+    @email = params[:email]
+    @message = params[:message]
+
+    ActionMailer::Base.mail(
+      from: @email,
+      to: 'edwardlosangeles@gmail.com',
+      subject: "A new contact form message from #{@name}",
+      body: @message).deliver_now
+      
+
+    # redirect_to static_pages_contact_path, notice: 'email sent'
+
+  end
+
+
+
 end

@@ -1,2 +1,22 @@
-<h1>StaticPages#contact</h1>
-<p>Find me in app/views/static_pages/contact.html.erb</p>
+<h1>Contact us</h1>
+
+<%= flash[:notice] %>
+
+<%= form_with(url: "/static_pages/thank_you", local: true) do |form| %>
+	
+	<div class="form-group">
+		<%= form.label :nameasdf %>
+		<%= form.text_field :name, class: "form-control", placeholder: "Enter Name", required: true %>
+	</div>
+	<div class="form-group">
+		<%= form.label :emailasdf, "Email Addressasdf" %>
+		<%= form.text_field :email, class: "form-control", placeholder: "Enter Email", required: true %>
+	</div>
+	<div class="form-group">
+		<%= form.label :messageasdf %>
+		<%= form.text_area :message, class: "form-control", placeholder: "Enter Message", required: true %>
+	</div>
+
+	<%= form.submit "Send" %>
+
+<% end %>

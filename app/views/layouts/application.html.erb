@@ -35,8 +35,13 @@
     with this layout: app/views/layouts/product.html.erb <br>
     ProductsController#index: render layout: "product" <br>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if notice %>
+      <p class="notice alert-info" role="alert"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-warning" role="alert"><%= alert %></p>
+    <% end %>
+    
 
    
 

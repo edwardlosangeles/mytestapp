@@ -17,3 +17,8 @@
 h1 {
 	color: orange;
 }
+
+/* adjust padding if alerts & notices show up behind navbar */
+.alert, .notice {
+	padding-top: 50px;
+}

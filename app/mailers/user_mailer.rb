@@ -10,7 +10,7 @@ class UserMailer < ApplicationMailer
 	end
 
 	def welcome(user)
-		@appname = "EpicEdward.com"
+		@appname = "epictestapp.herokuapp.com"
 		mail(to: user.email,
 			subject: "Welcome to #{@appname}!")
 	end

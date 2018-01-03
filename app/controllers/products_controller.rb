@@ -118,7 +118,7 @@ class ProductsController < ApplicationController
      # debug .rb
       p "*=*=*=*=DEBUG: " + File.expand_path(__FILE__) + ": product_params*=*=*=*="
 
-      params.require(:product).permit(:name, :description, :image_url, :color)
+      params.require(:product).permit(:name, :description, :image_url, :color, :image_thumb)
 
     end
 end

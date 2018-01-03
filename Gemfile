@@ -65,4 +65,5 @@ gem 'jquery-rails'
 
 gem 'devise'
 
+# Authorization
 gem 'cancancan', '~> 2.0'

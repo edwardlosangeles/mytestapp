@@ -35,8 +35,9 @@
 
 		<br>
 		override default layout: app/views/layouts/application.html.erb <br>
-		with this layout: app/views/layouts/product.html.erb <br>
-		ProductsController#index: render layout: "product" <br>
+		with this layout: app/views/layouts/contact.html.erb <br>
+		StaticPagesController#contact: render layout: "contact" <br>
+    or on top of StaticPagesController to apply layout to all views in controller: layout "contact"<br>
 
 		<%= yield %>
 

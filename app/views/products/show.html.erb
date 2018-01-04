@@ -1,29 +1,58 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @produc.name %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @produc.description %>
-</p>
+<%= link_to 'Edit', edit_product_path(@produc) %>
+<br>
+<%= link_to 'Destroy', @produc, method: :delete, data: { confirm: 'Are you sure?' } %>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @produc.image_url %>
-</p>
 
-<p>
-  <strong>Image thumb:</strong>
-  <%= @produc.image_thumb %>
-</p>
+<div class="row">
+	<div class="col-xs-4" id="product_show">
+		<%= link_to 'Back', products_path %>
+	</div>
+	<div class="col-xs-4" id="product_show">
+		<h2>
+			<%= @produc.name %>
+		</h2>
+	</div>
+</div>
 
-<p>
-	<strong>Color:</strong>
-	<%= @produc.color %>	
-</p>
+<div class="row">
+	<div class="col-xs-12" id="product_show">
+		<p>
+			<%= image_tag(@produc.image_url, width: "500", class: "img-responsive") %>
+		</p>
+	</div>
+</div>
 
-<%= link_to 'Edit', edit_product_path(@produc) %> |
-<%= link_to 'Back', products_path %>
+<div class="row">
+	<div class="col-xs-6" id="product_show">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		<%= @produc.description %>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-6" id="product_show">
+		<strong>Color:</strong>
+		<%= @produc.color %>
+	</div>
+	<div class="col-xs-6" id="product_show">
+		<div class="right_col">
+			<strong>Price:</strong>
+		</div>
+	</div>
+</div>
+
+<!-- raty -->
+<p>Average Rating: <div class="rated" data-score="<%= @produc.average_rating %>"></div></p>
+
+<!-- comment controller -->
+<%= render 'new_comment' %>
+<%= render 'comments' %>
+
+<!-- comment model -->
+<!-- you can do something like this but will error out if comment doesn't exist for a product -->
+<%#= @produc.highest_rating_comment.user_id %>
+<%#= @produc.highest_rating_comment.rating %>
+<%#= @produc.highest_rating_comment.body %>

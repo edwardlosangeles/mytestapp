@@ -1,8 +1,14 @@
 class StaticPagesController < ApplicationController
+  
+  # layout "contact"
+
   def index
   end
+  
   def contact
+    render layout: "contact"
   end
+
   def about
   end
 

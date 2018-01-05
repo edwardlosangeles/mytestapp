@@ -56,3 +56,11 @@
 <%#= @produc.highest_rating_comment.user_id %>
 <%#= @produc.highest_rating_comment.rating %>
 <%#= @produc.highest_rating_comment.body %>
+
+<!-- Pagination -->
+<p><div class="digg_pagination">
+	<div class="page_info">
+		<%= page_entries_info @comments %>
+	</div>
+	<%= will_paginate @comments, :container => false %>
+</div></p>

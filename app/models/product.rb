@@ -4,7 +4,6 @@ class Product < ApplicationRecord
 	# comment model
 	has_many :comments
 
-
 	# validation
 	validates :name, presence: true
 

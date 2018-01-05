@@ -8,9 +8,11 @@ class ProductsController < ApplicationController
     
     if params[:q]
       search_term = params[:q]
-      @products = Product.search(search_term)
+      # Pagination
+      @products = Product.search(search_term).paginate(:page => params[:page], :per_page => 8)
     else
-      @products = Product.all
+      # Pagination
+      @products = Product.all.paginate(:page => params[:page], :per_page => 8)
     end
 
 
@@ -23,7 +25,11 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     # comment controller
-    @comments = @produc.comments.order("created_at DESC")
+    # @comments = @produc.comments.order("created_at DESC")
+
+    # Pagination
+    @comments = @produc.comments.paginate(:page => params[:page], :per_page => 10).order("created_at DESC")
+
   end
 
   # GET /products/new

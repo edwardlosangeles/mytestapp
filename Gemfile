@@ -38,6 +38,9 @@ group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
 
+  # RSpec install
+  gem 'rspec-rails', '~> 3.6'
+
 end
 
 group :development do
@@ -70,3 +73,6 @@ gem 'cancancan', '~> 2.0'
 
 # Pagination
 gem 'will_paginate', '~> 3.1.0'
+
+# RSpec Functional Tests
+gem 'rails-controller-testing'

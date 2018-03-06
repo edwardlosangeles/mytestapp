@@ -41,6 +41,9 @@ group :development, :test do
   # RSpec install
   gem 'rspec-rails', '~> 3.6'
 
+  # RSpec Generate Test Data
+  gem "factory_bot_rails", "~> 4.0"
+
 end
 
 group :development do
